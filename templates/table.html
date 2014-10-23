@@ -1,0 +1,23 @@
+<html lang="en">
+<body>
+    <h1>Messages Till Now</h1>
+    <table border="1" style="width:1000px">
+    <style>
+		table,th,td
+		{border:1px solid black;
+		border-collapse:collapse}
+		th,td
+		{padding:20px;}
+	</style>
+	{% for message in messages %}
+		<tr>
+			<td>{{message.id}}</td>
+			<td>{{message.text}}</td>
+			<td>{{message.time_sent}}</td>
+			<td>{{message.from_number}}</td>
+			<td>{{message.to_number}}</td>
+		</tr>
+	{% endfor %}
+	</table>
+</body>
+</html>
